@@ -1,0 +1,12 @@
+{
+  "name": "node-express-typescript2",
+  "version": "1.0.0",
+  "description": "TypeScript2, Node.js, Express Starter Kit",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./dist/bin/www"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
