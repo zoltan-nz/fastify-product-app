@@ -2,11 +2,48 @@
   "name": "node-express-typescript2",
   "version": "1.0.0",
   "description": "TypeScript2, Node.js, Express Starter Kit",
-  "main": "index.js",
   "scripts": {
+    "clean": "rimraf lib .nyc-output coverage",
+    "lint": "tslint --force --fix \"src/**/*.ts\" \"test/**/*.ts\"",
+    "prebuild": "npm lint",
+    "build": "npm run clean && echo Using TypeScript && tsc --version && tsc --pretty",
+    "pretest": "npm build",
+    "test": "mocha",
+    "testOnly": "mocha",
+    "test:coverage": "nyc npm test && open coverage/index.html",
+    "test:watch": "npm test -- --watch",
+    "prepare": "npm test",
+    "watch": "npm build -- --watch",
+    "server": "nodemon lib/main",
+    "prestart": "npm build",
     "start": "node ./dist/bin/www"
   },
+  "dependencies": {
+    "express": "latest",
+    "lodash": "latest"
+  },
+  "devDependencies": {
+    "@types/chai": "latest",
+    "@types/lodash": "latest",
+    "@types/mocha": "latest",
+    "@types/node": "latest",
+    "@types/sinon": "latest",
+    "@types/sinon-chai": "latest",
+    "chai": "latest",
+    "coveralls": "latest",
+    "mocha": "latest",
+    "nodemon": "latest",
+    "nyc": "latest",
+    "rimraf": "latest",
+    "sinon": "latest",
+    "sinon-chai": "latest",
+    "ts-node": "latest",
+    "tslint": "latest",
+    "typescript": "latest"
+  },
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "engines": {
+    "node": ">= 6",
+    "npm": ">= 4"
+  }
 }
