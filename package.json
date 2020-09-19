@@ -1,7 +1,17 @@
 {
-  "name": "node-express-typescript2",
-  "version": "1.0.0",
-  "description": "TypeScript2, Node.js, Express Starter Kit",
+  "name": "fastify-product-app",
+  "version": "0.0.1",
+  "description": "Fastify and Product App",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "exnext": {
+    "main": "dist/index.js"
+  },
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "clean": "rimraf lib .nyc-output coverage",
     "lint": "tslint --force --fix \"src/**/*.ts\" \"test/**/*.ts\"",
